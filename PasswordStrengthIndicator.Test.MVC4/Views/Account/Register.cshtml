@@ -1,0 +1,57 @@
+﻿@model PasswordStrengthIndicator.Test.MVC4.Models.RegisterModel
+@{
+    ViewBag.Title = "Register";
+}
+
+<hgroup class="title">
+    <h1>@ViewBag.Title.</h1>
+    <h2>Create a new account.</h2>
+</hgroup>
+
+@using (Html.BeginForm())
+{
+    @Html.AntiForgeryToken()
+    @Html.ValidationSummary()
+
+    <fieldset>
+        <legend>Registration Form</legend>
+        <ol>
+            <li>
+                @Html.LabelFor(m => m.UserName)
+                @Html.TextBoxFor(m => m.UserName)
+            </li>
+            <li>
+                @Html.LabelFor(m => m.Password)
+                @Html.TextBoxFor(m => m.Password)
+                <br />
+                @Html.ActionLink("Password policy", "", null, new { id = "passwordPolicy" })
+            </li>
+            <li>
+                @Html.LabelFor(m => m.ConfirmPassword)
+                @Html.TextBoxFor(m => m.ConfirmPassword)
+            </li>
+        </ol>
+        <input type="submit" value="Register" id="btnSubmit" />
+    </fieldset>
+}
+
+@section Scripts {
+    @Scripts.Render("~/bundles/jqueryval")
+    @Scripts.Render("~/bundles/jquery.password.strength")
+
+    <script type="text/javascript">
+        jQuery(document).ready(function () {
+            var myPlugin = jQuery("input[id='Password']").password_strength({
+                //web site alias if any/xml folder if any/
+           @* @Url.Content("~/")xml/ --> return /web sie alias/ *@
+                appFolderXMLPath: "@Url.Content("~/")XmlDoc/",
+                passwordPolicyLinkId: 'passwordPolicy'
+            });
+
+            jQuery("[id='btnSubmit']").click(function () {
+                return myPlugin.metReq(); //return true or false
+            });
+        });
+    </script>
+}
+

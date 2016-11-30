@@ -1,0 +1,36 @@
+<%@ Master Language="C#" AutoEventWireup="true" CodeFile="MasterPage.master.cs" Inherits="MasterPage" %>
+
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+
+<html xmlns="http://www.w3.org/1999/xhtml">
+<head runat="server">
+    <title>ASP.NET - jQuery Password Strength Indicator</title>
+    <asp:ContentPlaceHolder id="head" runat="server">
+    </asp:ContentPlaceHolder>
+    
+    <style type="text/css">
+        body 
+        {
+            font-family:Verdana;font-size:10pt;
+        }
+    </style>
+    
+</head>
+<body>
+    <form id="form1" runat="server">
+    <div>
+        <div>Demo <br /> <br /> 
+            <asp:HyperLink ID="HyperLink1" NavigateUrl="~/Default.aspx" runat="server">Home</asp:HyperLink> | 
+            <asp:HyperLink ID="HyperLink2" NavigateUrl="~/Default2.aspx" Target="_blank" runat="server">Sample Without MasterPage</asp:HyperLink> | 
+            <asp:HyperLink ID="HyperLink3" NavigateUrl="~/jQuery_Password_Strength_Indicator.htm" Target="_blank" runat="server">HTML</asp:HyperLink> | 
+            <asp:HyperLink ID="HyperLink4" NavigateUrl="~/Password_Strength_Indicator.asp" Target="_blank" runat="server">Sample in Classic ASP</asp:HyperLink>
+            </div>
+        <hr />
+        <asp:ContentPlaceHolder id="ContentPlaceHolder1" runat="server">
+        
+        </asp:ContentPlaceHolder>
+        <div><hr />by Bryian Tan</div>
+    </div>
+    </form>
+</body>
+</html>

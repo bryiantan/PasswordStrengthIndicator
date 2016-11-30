@@ -1,0 +1,72 @@
+﻿<!doctype html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+
+    <title>jQuery UI Dialog - Default functionality</title>
+    <script type="text/javascript" src="//code.jquery.com/jquery-2.1.4.js"></script>
+    <script type="text/javascript" src="//code.jquery.com/ui/1.11.4/jquery-ui.js"></script>
+    <link rel="stylesheet" type="text/css" href="//code.jquery.com/ui/1.11.4/themes/ui-lightness/jquery-ui.css">
+
+    <script>
+
+        function openPopUp(url, divClass, title, width, height, btnOk) {
+            var b = [];
+            if (btnOk) {
+                b = [{ text: "OK", click: function () { jQuery("." + divClass).dialog('close'); } }];
+            }
+
+            var ifr = jQuery("." + divClass).find('iframe');
+
+            $("." + divClass).dialog({
+                modal: true,
+                autoOpen: true,
+                title: title,
+                width: width,
+                height: height,
+                resizable: false,
+                position: {
+                    my: "center",
+                    at: "center",
+                    of: window,
+                    within: window
+                },
+
+                buttons: b,
+
+                open: function () {
+                    setTimeout(function () {
+                        jQuery(ifr).attr('src', url);
+                    }, 10);
+                },
+
+                close: function () {
+                    jQuery(ifr).attr('src', 'about:blank');
+                    jQuery(this).dialog('destroy');
+                }
+            });
+        }
+
+        $(document).ready(function () {
+
+            jQuery("#btn").click(function () {
+                openPopUp('https://jqueryui.com/dialog/', 'divPop', 'Add New Store', 650, 550, true);
+                return false;
+            });
+        });
+
+    </script>
+
+</head>
+
+<body>
+
+    <div class="divPop ui-widget" style="display: none">
+        <iframe width="650px" height="650px" src=""></iframe>
+    </div>
+    <input type="button" value="test" id="btn" class="btn" />
+
+
+</body>
+
+</html>
