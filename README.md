@@ -26,3 +26,6 @@ Available Features:
 •	Check if password contains keyboard sequence (i.e., 123456, qwerty, …)
 
 Demo: http://download.ysatech.com/ASP-NET-jQuery-Password-Strength-v2/
+
+This plugin depends on:
+jQuery 1.4 and above, jquery.blockUI (optional)
