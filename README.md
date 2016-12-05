@@ -15,3 +15,4 @@ Available Features:
 •	Check if password exceeded the allowable Maximum consecutive repeated character
 •	Check if password contains keyboard sequence (i.e., 123456, qwerty, …)
 
+Demo: http://download.ysatech.com/ASP-NET-jQuery-Password-Strength-v2/
