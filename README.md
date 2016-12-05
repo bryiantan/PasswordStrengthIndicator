@@ -29,3 +29,31 @@ Demo: http://download.ysatech.com/ASP-NET-jQuery-Password-Strength-v2/
 
 This plugin depends on:
 jQuery 1.4 and above, jquery.blockUI (optional)
+
+Password setting is in PasswordPolicy.xml:
+
+duration - password age, expired in xxx days (example, not in use)
+
+minLength - password minimum length
+
+maxLength - password maximum length
+
+numsLength - minimum number of required digits  
+
+upperLength - minimum number of required upper case 
+
+specialLength - minimum number of required special characters 
+
+specialChars - allowable special characters
+
+barWidth - set the bar indicator width
+
+barColor - the bar indicator colors
+
+useMultipleColors - 1=Yes, 0=No
+
+maxConsecutiveRepeatedChars - 0=allow repeat, 1..n = allow 1..n maximum number of successive repetitions of a given character (example: if 1, aa will not be valid because it repeated more than 1)
+
+maxKeyboardSequence - maximun allowable keyboard sequence (example: if 2, 123 will not be valid, but 12 will be valid. Note the sequence defined in keyboardSequenceCharacters)
+
+keyboardSequenceCharacters - defined the list of keyboard sequence
