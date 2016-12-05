@@ -3,6 +3,8 @@ Password strength indicator using jQuery and XML
 
 Password Strength Indicator somewhat similar to AJAX PasswordStrength extender control behavior and implemented by using jQuery and XML.
 
+------------------------------------------------------------------------
+
 Available Features:
 
 •	Password setting are stored in xml file
@@ -27,8 +29,12 @@ Available Features:
 
 Demo: http://download.ysatech.com/ASP-NET-jQuery-Password-Strength-v2/
 
+------------------------------------------------------------------------
+
 This plugin depends on:
 jQuery 1.4 and above, jquery.blockUI (optional)
+
+------------------------------------------------------------------------
 
 Password setting is in PasswordPolicy.xml:
 
