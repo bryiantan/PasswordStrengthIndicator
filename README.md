@@ -33,8 +33,8 @@ Demo: http://download.ysatech.com/ASP-NET-jQuery-Password-Strength-v2/
 Nuget: https://www.nuget.org/packages/PasswordStrengthIndicator/
 
 Test pages in PasswordStrengthIndicator.Example folder. To get it to works:
-- Rename the Default.aspx.txt to Default.aspx
-- Update the JavaScripts reference
+- Rename the Default.aspx.txt to Default.aspx, update the JavaScripts reference
+
 ------------------------------------------------------------------------
 
 This plugin depends on:
