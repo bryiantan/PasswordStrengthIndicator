@@ -24,7 +24,9 @@ Sample XML file contents:
 <barWidth>200</barWidth> //the bar indicator width
 <barColor>Green</barColor> //the bar indicator colors
 <specialChars>!@#\$%*()_+^&amp;}{:;?.</specialChars> //allowable special characters
- <maxConsecutiveRepeatedChars>1</maxConsecutiveRepeatedChars>
+<maxConsecutiveRepeatedChars>1</maxConsecutiveRepeatedChars>
+<maxKeyboardSequence>2</maxKeyboardSequence>
+<keyboardSequenceCharacters>Whatever character sequences you have in mind</keyboardSequenceCharacters>
 </Password>
 </PasswordPolicy>
 */

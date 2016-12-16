@@ -38,6 +38,8 @@ namespace PasswordStrengthIndicator.Core
                     passwordSetting.UpperLength = int.Parse(node2["upperLength"].InnerText);
                     passwordSetting.SpecialChars = node2["specialChars"].InnerText;
                     passwordSetting.MaxConsecutiveRepeatedChars = int.Parse(node2["maxConsecutiveRepeatedChars"].InnerText);
+                    passwordSetting.MaxKeyboardSequence = int.Parse(node2["maxKeyboardSequence"].InnerText);
+                    passwordSetting.KeyboardSequenceCharacters = node2["keyboardSequenceCharacters"].InnerText;
                 }
             }
 
@@ -79,7 +81,7 @@ namespace PasswordStrengthIndicator.Core
 
             //check sequence
             if (Regex.IsMatch(strPassword, sbPasswordRegx.ToString()))
-                return !Helper.IsPasswordContainSequence(strPassword);
+                return !Helper.IsPasswordContainSequence(strPassword, passwordSetting);
             //more custom validation here ....
 
             return false;// Regex.IsMatch(strPassword, sbPasswordRegx.ToString());
@@ -87,13 +89,14 @@ namespace PasswordStrengthIndicator.Core
         }
 
         //check for keybard sequence
-        public static bool IsPasswordContainSequence(string strPassword)
+        public static bool IsPasswordContainSequence(string strPassword, PasswordSetting passwordSetting)
         {
             int startIndex = 0;
             int num = 0;
-            int length = 3;
+            int length = passwordSetting.MaxKeyboardSequence + 1;
             string empty = string.Empty;
-            string str1 = "`1234567890-==-0987654321`qwertyuiopasdfghjklzxcvbnm1qazxsw23edcvfr45tgbnhy67ujm,ki89ol./;p0abcdefghijklmnopqrstuvwxyz" + "zyxwvutsrqponmlkjihgfedcba!qazxsw23edcvfr45tgbnhy67ujm,ki89ol./;p0poiuytrewqlkjhgfdsamnbvcxz" + "poiuytrewqlkjhgfdsamnbvcxz~!@#$%^&*()_+" + "zaq12wsxcde34rfvbgt56yhnmju78ik,.lo90p;/";
+            string str1 = passwordSetting.KeyboardSequenceCharacters;
+                //"`1234567890-==-0987654321`qwertyuiopasdfghjklzxcvbnm1qazxsw23edcvfr45tgbnhy67ujm,ki89ol./;p0abcdefghijklmnopqrstuvwxyz" + "zyxwvutsrqponmlkjihgfedcba!qazxsw23edcvfr45tgbnhy67ujm,ki89ol./;p0poiuytrewqlkjhgfdsamnbvcxz" + "poiuytrewqlkjhgfdsamnbvcxz~!@#$%^&*()_+" + "zaq12wsxcde34rfvbgt56yhnmju78ik,.lo90p;/";
             while (num < strPassword.Length)
             {
                 num = startIndex + length;

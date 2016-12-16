@@ -37,5 +37,9 @@ namespace PasswordStrengthIndicator.Core
 
         //password Special character length
         public int MaxConsecutiveRepeatedChars { get; set; }
+
+        public int MaxKeyboardSequence { get; set; }
+
+        public string KeyboardSequenceCharacters { get; set; }
     }
 }
