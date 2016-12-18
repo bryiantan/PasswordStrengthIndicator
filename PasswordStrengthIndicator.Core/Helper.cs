@@ -96,7 +96,6 @@ namespace PasswordStrengthIndicator.Core
             int length = passwordSetting.MaxKeyboardSequence + 1;
             string empty = string.Empty;
             string str1 = passwordSetting.KeyboardSequenceCharacters;
-                //"`1234567890-==-0987654321`qwertyuiopasdfghjklzxcvbnm1qazxsw23edcvfr45tgbnhy67ujm,ki89ol./;p0abcdefghijklmnopqrstuvwxyz" + "zyxwvutsrqponmlkjihgfedcba!qazxsw23edcvfr45tgbnhy67ujm,ki89ol./;p0poiuytrewqlkjhgfdsamnbvcxz" + "poiuytrewqlkjhgfdsamnbvcxz~!@#$%^&*()_+" + "zaq12wsxcde34rfvbgt56yhnmju78ik,.lo90p;/";
             while (num < strPassword.Length)
             {
                 num = startIndex + length;
