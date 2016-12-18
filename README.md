@@ -35,6 +35,12 @@ Nuget: https://www.nuget.org/packages/PasswordStrengthIndicator/
 Test pages in PasswordStrengthIndicator.Example folder. To get it to works:
 - Rename the Default.aspx.txt to Default.aspx, update the JavaScripts reference
 
+v2.0 - Initial 
+
+v2.1 - updated the PasswordStrengthIndicator.Core assembly to read maxKeyboardSequence and keyboardSequenceCharacters from XML file
+
+v2.2 - Updated web.config.install.xdt to insert appsetting element if not exists
+
 ------------------------------------------------------------------------
 
 This plugin depends on:
