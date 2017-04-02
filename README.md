@@ -3,6 +3,8 @@ Password strength indicator using jQuery and XML
 
 Password Strength Indicator somewhat similar to AJAX PasswordStrength extender control behavior and implemented by using jQuery and XML.
 
+![alt tag](https://blog.ysatech.com/images/psi/PasswordStrengthIndicator.png)
+
 ------------------------------------------------------------------------
 
 Available Features:
