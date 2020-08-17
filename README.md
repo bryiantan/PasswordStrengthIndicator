@@ -77,3 +77,5 @@ maxConsecutiveRepeatedChars - 0=allow repeat, 1..n = allow 1..n maximum number o
 maxKeyboardSequence - maximun allowable keyboard sequence (example: if 2, 123 will not be valid, but 12 will be valid. Note the sequence defined in keyboardSequenceCharacters)
 
 keyboardSequenceCharacters - defined the list of keyboard sequence
+
+https://dev.azure.com/btanUspsOig/74a65773-1442-43d9-af2d-3072c75eae14/e8c88b00-3a59-4271-8a1f-d24c1a1dc639/_apis/work/boardbadge/6f40548c-d316-44f4-91b8-e67c11846bd0?columnOptions=1
