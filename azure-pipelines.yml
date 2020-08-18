@@ -1,18 +1,10 @@
 jobs:
 - job: A
   steps:
-  - script: exit 1
+  - script: echo hello
 
 - job: B
   dependsOn: A
-  condition: failed()
+  condition: and(succeeded(), eq(variables['build.sourceBranch'], 'refs/heads/master'))
   steps:
-  - script: echo this will run when A fails
-
-- job: C
-  dependsOn:
-  - A
-  - B
-  condition: succeeded('B')
-  steps:
-  - script: echo this will run when B runs and succeeds
+  - script: echo this only runs for master
